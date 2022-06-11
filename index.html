@@ -3,25 +3,38 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
+
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 		<link rel="stylesheet" href="css/style.css" />
 
 		<title>Frontend Mentor | Profile card component</title>
 	</head>
 	<body>
-		
-		<!-- Victor Crest
-  26
-  London
-
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos -->
-		
+		<main>
+			<article class="card">
+				<div class="card__header"></div>
+				<div class="card__body">
+					<img src="./images/image-victor.jpg" alt="Victor" class="profil-photo" />
+					<h2 class="profile-name">Victor Crest <span>26</span></h2>
+					<p class="profile-city">London</p>
+				</div>
+				<div class="card__footer">
+					<dl class="profil-stats">
+						<div>
+							<dt class="stats-num">80K</dt>
+							<dl class="stats-desc">Followers</dl>
+						</div>
+						<div>
+							<dt class="stats-num">803K</dt>
+							<dl class="stats-desc">Likes</dl>
+						</div>
+						<div>
+							<dt class="stats-num">1.4K</dt>
+							<dl class="stats-desc">Photos</dl>
+						</div>
+					</dl>
+				</div>
+			</article>
+		</main>
+	</body>
 </html>
