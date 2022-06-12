@@ -66,6 +66,7 @@ img {
 	background-color: white;
 	border-radius: 1rem;
 	overflow: hidden;
+	box-shadow: 1px 1px 10px 5px rgba(48, 48, 48, 0.2);
 }
 
 .card__header {
