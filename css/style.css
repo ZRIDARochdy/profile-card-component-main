@@ -1,7 +1,132 @@
-.attribution {
-	font-size: 11px;
-	text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* -------------------------------------------------------------------------- */
+/*                               Variables Style                              */
+/* -------------------------------------------------------------------------- */
+
+:root {
+	/*** Primary Color ***/
+
+	--darkCyan: hsl(185, 75%, 39%);
+	--veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+	--darkGrayishBlue: hsl(227, 10%, 46%);
+
+	/*** Neutral Color ***/
+
+	--darkGray: hsl(0, 0%, 59%);
+
+	/*** Font ***/
+
+	--primaryFont: 'Kumbh Sans', sans-serif;
+	--defaultFontSize: 0.625rem;
+	--defaultFontWeight: 400;
+	--AccentFontSize: 1.125rem;
+	--AccentFontWeight: 700;
 }
-.attribution a {
-	color: hsl(228, 45%, 44%);
+
+/* -------------------------------------------------------------------------- */
+/*                                 Reset Style                                */
+/* -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                General Style                               */
+/* -------------------------------------------------------------------------- */
+
+body {
+	font-family: var(--primaryFont);
+	font-size: var(--defaultFontSize);
+	font-weight: var(--defaultFontWeight);
+	min-height: 100vh;
+	padding: 1.5rem;
+	display: grid;
+	place-content: center;
+	background-color: var(--darkCyan);
+	background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
+	background-repeat: no-repeat;
+	background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+img {
+	display: block;
+}
+
+/*-------------------------------------------------------------------------- */
+/*                                Card Style                                  */
+/* -------------------------------------------------------------------------- */
+
+.card {
+	min-width: 20.3125rem;
+	background-color: white;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.card__header {
+	min-height: 8.75rem;
+	background-image: url('/images/bg-pattern-card.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.card__body {
+	text-align: center;
+	border-bottom: 1px solid hsl(0, 0%, 91%);
+}
+.profil-photo {
+	--border: 0.3125rem;
+	border: var(--border) solid white;
+	border-radius: 50%;
+	margin-top: calc(-2.5rem - (var(--border) * 2));
+	margin-inline: auto;
+}
+.profile-name {
+	font-size: var(--AccentFontSize);
+	font-weight: var(--AccentFontWeight);
+	color: var(--veryDarkDesaturatedBlue);
+	margin: 1.5625rem auto 1.0625rem;
+}
+
+.profile-name .age {
+	font-weight: var(--defaultFontWeight);
+	color: var(--darkGrayishBlue);
+}
+.profile-city {
+	color: var(--darkGrayishBlue);
+	margin-bottom: 1.875rem;
+}
+
+.card__footer {
+	text-align: center;
+	padding: 1.875rem 2.5rem;
+}
+.card__footer .profil-stats {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card__footer .stats-num {
+	font-size: var(--AccentFontSize);
+	font-weight: var(--AccentFontWeight);
+	color: var(--veryDarkDesaturatedBlue);
+}
+.card__footer .stats-desc {
+	font-size: 0.5rem;
+	font-weight: var(--defaultFontWeight);
+	color: var(--darkGrayishBlue);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Queries                               */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 50rem) {
+	.card {
+		min-width: 21.875rem;
+	}
 }
