@@ -49,7 +49,7 @@ body {
 	display: grid;
 	place-content: center;
 	background-color: var(--darkCyan);
-	background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
+	background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
 	background-repeat: no-repeat;
 	background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 }
@@ -70,7 +70,7 @@ img {
 
 .card__header {
 	min-height: 8.75rem;
-	background-image: url('/images/bg-pattern-card.svg');
+	background-image: url('../images/bg-pattern-card.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
